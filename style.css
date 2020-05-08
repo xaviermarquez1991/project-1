@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: rgb(13, 75, 23); */
+    background-image: url(/images/backgroundFelt.jpg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    background-image: url("./images/bjHome.jpg");
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 500px;
+    border: 2px solid black;
+}
+
+main > h1 {
+    font-family: Carter One;
+    padding: 10px 50px 10px 70px;
+    color: rgb(241, 196, 15);
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 30px;
+    border: 3px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    background-color: white;;
+    font-weight: 90px;
+    font-size: 25px;
+    text-transform: uppercase;
+    width: 125px
+}

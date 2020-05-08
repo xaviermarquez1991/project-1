@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+min-height: 100vh;
+}
+
+.wrapper {
+    height: 800px
+    background-color: bisque;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 350px 350px 100px 50px ;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+}
+
+.deck {
+    background-color: red;
+    grid-row: span 2;
+}
+
+.dealer {
+    background-color: green;
+}
+
+.player {
+    background-color: blue;
+}
+
+.hit {
+    background-color: pink;
+}
+
+.stay {
+    background-color: yellow;
+}
+
+.reset {
+    background-color: purple;
+    grid-column: span 2;
+}
