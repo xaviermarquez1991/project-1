@@ -3,7 +3,6 @@
 }
 
 body {
-    /* background-color: rgb(13, 75, 23); */
     background-image: url(/images/backgroundFelt.jpg);
     min-height: 100vh;
     display: flex;
