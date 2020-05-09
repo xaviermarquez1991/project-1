@@ -99,6 +99,14 @@ body {
     grid-column: span 2;
 }
 
+/* .cardone > img {
+    display: flex;
+    background-color: white;
+    height: 150px;
+    margin: 5px;
+    justify-content: space-evenly;
+} */
+
  .player {
     /* background-color: violet; */
 }
@@ -133,6 +141,15 @@ body {
     justify-content: center;
     align-items: center;
     grid-column: span 2;
+}
+
+.cardtwo > img, .cardone > img  {
+    display: flex;
+    background-color: white;
+    height: 150px;
+    margin: 5px;
+    justify-content: space-evenly;
+    
 }
 
 .actionButtons {
