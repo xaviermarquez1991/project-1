@@ -5,52 +5,27 @@
 }
 
 body {
-    display: grid;
-    background-image: url(/images/backgroundFelt.jpg);
+    display: flex;
+    background-image: url(/1project/images/backgroundFelt.jpg);
+    min-height: 100vh;
 }
 
 .wrapper {
-    /* height: 800px */
     /* background-color: bisque; */
     width: 100%;
     margin: auto;
     display: grid;
-    grid-template-rows: 350px 350px 100px 50px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 200px 50px 200px 50px 50px;
+    grid-template-columns: 4.5fr 4.5fr 1fr;
     color: white;
 }
 
-.deck {
+.header {
     display: grid;
-    grid-template-rows: 100px 700px;
     /* background-color: red; */
-    grid-row: span 2;
 }
 
-.deck > h1 {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    font-family: Carter One;
-    padding: 10px 50px 10px 70px;
-    color: rgb(241, 196, 15);
-    font-size: 60px;
-    text-transform: uppercase;
-    text-shadow:
-        3px 3px 0 #000,
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-}
-
-.dealer {
-    /* background-color: green; */
-    display: grid;
-    grid-template-rows: 50px 300px;
-}
-
-.dealer > h1 {
+.header > h1 {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -66,10 +41,66 @@ body {
         1px 1px 0 #000;
 }
 
-.player {
-    /* background-color: blue; */
+.dealer {
+    /* background-color: green; */
+}
+
+.dealer > h1 {
     display: grid;
-    grid-template-rows: 50px 300px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(241, 196, 15);
+    font-size: 40px;
+    text-transform: uppercase;
+    text-decoration: underline solid;
+    text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.dealerScore {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.deck {
+    /* background-color: aqua; */
+    grid-row: span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deck > #bottomcard {
+    background-color:white;
+    position: absolute;
+    top: 160;
+    left: 110;
+}
+
+.deck > #topcard {
+    background-color:white;
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+
+.cardone {
+    /* background-color: pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 2;
+}
+
+ .player {
+    /* background-color: violet; */
 }
 
 .player > h1 {
@@ -88,44 +119,45 @@ body {
         1px 1px 0 #000;
 }
 
-.hit {
-    /* background-color: pink; */
+.playerScore {
+    /* background-color: darkcyan; */
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 50px;
 }
 
-.hit > button {
-    font-size: 30px;
-    width: 200px;
-    height: 75px;
-    font-weight: bolder;
-}
-
-.stay {
+.cardtwo {
     /* background-color: yellow; */
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.stay > button {
-    font-size: 30px;
-    width: 200px;
-    height: 75px;
-    font-weight: bolder;
-}
-
-.reset {
-    display: flex;
-    /* background-color: purple; */
     grid-column: span 2;
-    justify-content: center;
+}
+
+.actionButtons {
+    /* background-color: bisque; */
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
+.actionButtons > button {
+    font-size: 25px;
+    font-weight: bolder;
+    width: 150px;
+}
+
+.reset {
+    /* background-color: darkblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 3;
+}
+
 .reset > button {
-    height: 35px;
+    font-size: 25px;
     font-weight: bolder;
 }
-.

@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url(/images/backgroundFelt.jpg);
+   background-color: rgb(31,49,53);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
