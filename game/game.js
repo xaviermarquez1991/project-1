@@ -26,16 +26,18 @@ class Hand {
 
 const SUITS = ['clubs', 'spades', 'diamonds', 'hearts'];
 
-const dealerImage = document.getElementById('dealerCard1');
-const dealerImage2 = document.getElementById('dealerCard2');
-const playerImage = document.getElementById('playerCard1');
-const playerImage2 = document.getElementById('playerCard2');
+// const dealerImage = document.getElementById('dealerCard1');
+// const dealerImage2 = document.getElementById('dealerCard2');
+// const playerImage = document.getElementById('playerCard1');
+// const playerImage2 = document.getElementById('playerCard2');
 
 const dealerScore = document.getElementById('dealerScore');
 const playerScore = document.getElementById('playerScore');
+const playerZone = document.getElementById('playerZone');
+const dealerZone = document.getElementById('dealerZone');
 
 
-console.log(dealerImage);
+
 
 //==================================STATE ELEMENTS=============================================//
 
@@ -46,14 +48,14 @@ console.log(dealerImage);
 //===============================CACHED ITEMS==========================================================//
 
 let deck = [];
-let userHand = new Hand([]);
+let playerHand = new Hand([]);
 let dealerHand = new Hand([]);
-
-
+let pTurn = true;
+let isWon = false;
 
 //======================================EVENT LISTERNERS=====================================//
 
-
+document.getElementById('hitButton').addEventListener('click', clickHit);
 
 
 
@@ -72,15 +74,11 @@ function init() {
 
 
 function render() {
-    dealerImage.src = dealerHand.cards[0].image;
-    dealerImage2.src = dealerHand.cards[1].image;
-    playerImage.src = userHand.cards[0].image;
-    playerImage2.src = userHand.cards[1].image;
 
+    renderPlayerCards();
+    renderDealerCards();
     dealerScore.innerHTML = dealerHand.value();
-    playerScore.innerHTML = userHand.value();
-
-    
+    playerScore.innerHTML = playerHand.value();
 
 }
 
@@ -106,8 +104,41 @@ function randomizeDeck(startDeck) {
 }
 
 function dealCards() {
-    userHand.cards.push(deck.shift());
+    playerHand.cards.push(deck.shift());
     dealerHand.cards.push(deck.shift());
-    userHand.cards.push(deck.shift());
+    playerHand.cards.push(deck.shift());
     dealerHand.cards.push(deck.shift());
+}
+
+
+function clickHit(evt) {
+    if (pTurn) {
+        playerHand.hit(deck.shift());
+    } else {
+        dealerHand.hit(deck.shift());
+    }
+    render();
+}
+
+function renderPlayerCards() {
+    while (playerZone.hasChildNodes()) {
+        playerZone.removeChild(playerZone.firstChild);
+    }
+    playerHand.cards.forEach(function (card) {
+        let newImage = document.createElement("img");
+        newImage.src = card.image;
+        playerZone.appendChild(newImage);
+    });
+}
+
+
+function renderDealerCards() {
+    while (dealerZone.hasChildNodes()) {
+        dealerZone.removeChild(dealerZone.firstChild);
+    }
+    dealerHand.cards.forEach(function (card) {
+        let newImage = document.createElement('img');
+        newImage.src = card.image;
+        dealerZone.appendChild(newImage);
+    })
 }
