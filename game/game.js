@@ -50,12 +50,13 @@ const dealerZone = document.getElementById('dealerZone');
 let deck = [];
 let playerHand = new Hand([]);
 let dealerHand = new Hand([]);
-let pTurn = true;
+// let pTurn = true;
 let isWon = false;
 
 //======================================EVENT LISTERNERS=====================================//
 
 document.getElementById('hitButton').addEventListener('click', clickHit);
+document.getElementById('stayButton').addEventListener('click', clickStay);
 
 
 
@@ -112,12 +113,15 @@ function dealCards() {
 
 
 function clickHit(evt) {
-    if (pTurn) {
+    if (!isWon) {
         playerHand.hit(deck.shift());
-    } else {
-        dealerHand.hit(deck.shift());
-    }
+    } 
     render();
+}
+
+function clickStay(evt) {
+    // pTurn = false;
+    playDealer();
 }
 
 function renderPlayerCards() {
@@ -141,4 +145,11 @@ function renderDealerCards() {
         newImage.src = card.image;
         dealerZone.appendChild(newImage);
     })
+}
+
+function playDealer() {
+    while (dealerHand.value() <= 16) {
+        dealerHand.hit(deck.shift());
+    }
+    render();
 }
