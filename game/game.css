@@ -15,14 +15,29 @@ body {
     width: 100%;
     margin: auto;
     display: grid;
-    grid-template-rows: 50px 200px 50px 200px 50px 50px;
+    grid-template-rows: 50px 50px 200px 50px 200px 50px 50px;
     grid-template-columns: 4.5fr 4.5fr 1fr;
     color: white;
 }
 
+.headline {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 3;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.headline > h1 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
 .header {
-    display: grid;
+    /* display: grid; */
     /* background-color: red; */
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
 }
 
 .header > h1 {
@@ -43,6 +58,8 @@ body {
 
 .dealer {
     /* background-color: green; */
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
 }
 
 .dealer > h1 {
@@ -63,6 +80,8 @@ body {
 
 .dealerScore {
     /* background-color: blue; */
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,21 +90,22 @@ body {
 
 .deck {
     /* background-color: aqua; */
-    grid-row: span 3;
+    grid-row: 3 /span 3;
+    grid-column: 1 / span 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .deck > #bottomcard {
-    background-color:white;
+    background-color: white;
     position: absolute;
     top: 160;
     left: 110;
 }
 
 .deck > #topcard {
-    background-color:white;
+    background-color: white;
     position: relative;
     top: 10px;
     left: 30px;
@@ -93,6 +113,8 @@ body {
 
 .cardone {
     /* background-color: pink; */
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,8 +129,10 @@ body {
     justify-content: space-evenly;
 } */
 
- .player {
+.player {
     /* background-color: violet; */
+    grid-row: 4 / span 1;
+    grid-column: 2 / span 1;
 }
 
 .player > h1 {
@@ -129,6 +153,8 @@ body {
 
 .playerScore {
     /* background-color: darkcyan; */
+    grid-row: 4 / span 1;
+    grid-column: 3 / span 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,44 +163,55 @@ body {
 
 .cardtwo {
     /* background-color: yellow; */
+    grid-row: 5 / span 1;
+    grid-column: 2 / span 1;
     display: flex;
     justify-content: center;
     align-items: center;
     grid-column: span 2;
 }
 
-.cardtwo > img, .cardone > img  {
+.cardtwo > img,
+.cardone > img {
     display: flex;
     background-color: white;
     height: 150px;
     margin: 5px;
     justify-content: space-evenly;
-    
+
 }
 
 .actionButtons {
     /* background-color: bisque; */
-    grid-column: span 3;
+    grid-column: 1 / span 3;
+    grid-row: 6 / span 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    cursor: pointer;
+
 }
 
-.actionButtons > button {
+.actionButtons>button {
     font-size: 25px;
     font-weight: bolder;
     width: 150px;
+    cursor: pointer;
 }
 
 .reset {
     /* background-color: darkblue; */
+    grid-row: 7 / span 1;
+    grid-column: 1 / span 3;
     display: flex;
     justify-content: center;
     align-items: center;
     grid-column: span 3;
 }
 
-.reset > button {
-    font-size: 25px;
+.reset>button {
+    font-size: 20px;
+    padding: 10px;
     font-weight: bolder;
+    cursor: pointer;
 }
