@@ -178,7 +178,7 @@ function renderDealerCards() {
     }
     dealerHand.cards.forEach(function (card, idx) {
         let newImage = document.createElement('img');
-        newImage.src = (idx === 0) ? "/1project/card-deck-css/images/backs/red.svg" : card.image;
+        newImage.src = (idx === 0) ? "../card-deck-css/images/backs/red.svg" : card.image;
         dealerZone.appendChild(newImage);
     });
     if (isWon) {

@@ -6,7 +6,7 @@
 
 body {
     display: flex;
-    background-image: url(/1project/images/backgroundFelt.jpg);
+    background-image: url(../images/backgroundFelt.jpg);
     min-height: 100vh;
 }
 
