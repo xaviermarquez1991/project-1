@@ -5,8 +5,8 @@ BlackJack, also referred to as _Twenty-One_, is a comparing card game between on
 
 ## Here's a quick preview:
 
-![Home Screen](/images/homeScreen.jpg)
-![Game Board](/images/gameBoard.jpg)
+![Home Screen](/images/homeScreen.JPG)
+![Game Board](/images/gameBoard.JPG)
 
 
 
