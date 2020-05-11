@@ -5,8 +5,8 @@ BlackJack, also referred to as _Twenty-One_, is a comparing card game between on
 
 ## Here's a quick preview:
 
-![Home Screen](/images/homeScreen.JPG)
-![Game Board](/images/gameBoard.JPG)
+![Home Screen](/images/smallHomeScreen.JPG)
+![Game Board](/images/smallGameBoard.JPG)
 
 
 
@@ -46,6 +46,11 @@ BlackJack, also referred to as _Twenty-One_, is a comparing card game between on
 2. CSS
 3. Javascript
 
+
+# Potential Future Updates
+1. The addition of sounds when the users or dealer wins, busts or is dealt a BlackJack.
+2. Responsive animation of the cards being dealt and shuffled.
+3. Expansion of the gameboard to allow for multiple players.
 
 # Getting Started
 Click the following link to launch the game. [Let's Play BlackJack!](https://xaviermarquez1991.github.io/project-1/)
