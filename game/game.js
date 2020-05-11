@@ -1,4 +1,4 @@
-// =================================CONSTANTS====================================================//
+// =================================CONSTANTS AND CLASSES====================================================//
 
 class Card {
     constructor(cardValue, cardImage) {
@@ -45,24 +45,22 @@ class Hand {
     }
 }
 
-
 const SUITS = ['clubs', 'spades', 'diamonds', 'hearts'];
 const dealerScore = document.getElementById('dealerScore');
 const playerScore = document.getElementById('playerScore');
 const playerZone = document.getElementById('playerZone');
 const dealerZone = document.getElementById('dealerZone');
-
 const headline = document.getElementById('headline');
-
-
 
 //==================================STATE ELEMENTS=============================================//
 
+//Player Score
+//Dealer Score
+//Current Turn (player vs dealer)
+//Which cards has been played.
+//Who Wins
 
-
-
-
-//===============================CACHED ITEMS==========================================================//
+//=====================CACHED ITEMS - THINGS THAT WILL BE OPERATED ON==========================================================//
 
 let deck = [];
 let playerHand = new Hand([]);
@@ -77,11 +75,7 @@ document.getElementById('hitButton').addEventListener('click', clickHit);
 document.getElementById('stayButton').addEventListener('click', clickStay);
 document.getElementById('resetButton').addEventListener('click', reset);
 
-
-
-
-
-//========================================FUNCTION==============================================//
+//========================================FUNCTIONS==============================================//
 
 init();
 
