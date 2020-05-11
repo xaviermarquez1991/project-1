@@ -48,4 +48,4 @@ BlackJack, also referred to as _Twenty-One_, is a comparing card game between on
 
 
 # Getting Started
-Click the following link to launch the game. [Let's Play BlackJack!](http://127.0.0.1:5500/index.html)
+Click the following link to launch the game. [Let's Play BlackJack!](https://xaviermarquez1991.github.io/project-1/)
