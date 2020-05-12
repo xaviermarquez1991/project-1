@@ -1,4 +1,3 @@
-// =================================CONSTANTS AND CLASSES====================================================//
 
 class Card {
     constructor(cardValue, cardImage) {
@@ -52,15 +51,6 @@ const playerZone = document.getElementById('playerZone');
 const dealerZone = document.getElementById('dealerZone');
 const headline = document.getElementById('headline');
 
-//==================================STATE ELEMENTS=============================================//
-
-//Player Score
-//Dealer Score
-//Current Turn (player vs dealer)
-//Which cards has been played.
-//Who Wins
-
-//=====================CACHED ITEMS - THINGS THAT WILL BE OPERATED ON==========================================================//
 
 let deck = [];
 let playerHand = new Hand([]);
@@ -69,13 +59,11 @@ let dealerHasBJ = false;
 let playerHasBJ = false;
 let isWon = false;
 
-//======================================EVENT LISTERNERS=====================================//
 
 document.getElementById('hitButton').addEventListener('click', clickHit);
 document.getElementById('stayButton').addEventListener('click', clickStay);
 document.getElementById('resetButton').addEventListener('click', reset);
 
-//========================================FUNCTIONS==============================================//
 
 init();
 
@@ -185,7 +173,6 @@ function playDealer() {
         dealerHand.hit(deck.shift());
     }
     checkWinner();
-    // render();
 }
 
 function checkWinner() {
